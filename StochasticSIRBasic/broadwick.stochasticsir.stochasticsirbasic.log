@@ -1,0 +1,8 @@
+[main] INFO  Running broadwick UNKNOWN VERSION 
+[main] INFO  Running broadwick for the following models [Broadwick Project] 
+[pool-1-thread-1] INFO  Running Broadwick Project [broadwick.stochasticsir.stochasticsirbasic.StochasticSIRBasic] 
+[pool-1-thread-1] INFO  Initialising project 
+[pool-1-thread-1] INFO  Read in variable from XML file: Test 
+[pool-1-thread-1] INFO  Running project 
+[pool-1-thread-1] INFO  Closing project 
+[main] INFO  Simulation complete. 0:00:00.671 

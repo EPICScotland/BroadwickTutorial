@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project>
+    <logs>
+	<console>
+	    <level>info</level> 
+	    <pattern>[%thread] %-5level %msg %n</pattern>
+	</console>
+	<file>
+	    <name>broadwick.stochasticsir.stochasticsirbasic.log</name> 
+	    <level>info</level> 
+	    <pattern>[%thread] %-5level %msg %n</pattern>
+	    <overwrite>true</overwrite>
+	</file>
+    </logs>
+   
+    <models>
+	<model id="Broadwick Project">
+	    <classname>broadwick.stochasticsir.stochasticsirbasic.StochasticSIRBasic</classname>
+	    <parameter id="test" value="Test"/>
+	</model>
+    </models>
+</project>
+
+

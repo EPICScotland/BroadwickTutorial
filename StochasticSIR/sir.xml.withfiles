@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project>
+    <logs>
+	<console>
+	    <level>trace</level> 
+	    <pattern>[%thread] %-5level %msg %n</pattern>
+	</console>
+    </logs>  
+    <data>
+        <datafiles>
+            <DirectedMovementFile>
+                <name>C:\broadwick\StochasticSIR\simMov_movementRecords.csv</name>
+                <alias>CattleMovements</alias>
+                <separator>,</separator>
+                <idColumn>1</idColumn>
+                <movementDateColumn>4</movementDateColumn>
+                <locationColumn>3</locationColumn>
+                <movementDirectionColumn>5</movementDirectionColumn>
+                <speciesColumn>2</speciesColumn>
+                <dateFormat>dd/MM/yyyy</dateFormat>
+            </DirectedMovementFile>
+            <PopulationFile>
+                <name>C:\broadwick\StochasticSIR\simMov_lifeHistories.csv</name>
+                <separator>,</separator>
+                <alias>cattlePopulations</alias>
+                <lifeHistory>
+                    <idColumn>1</idColumn>
+                    <speciesColumn>6</speciesColumn>
+                    <dateOfBirthColumn>2</dateOfBirthColumn>
+                    <locationOfBirthColumn>3</locationOfBirthColumn>
+                    <dateOfDeathColumn>4</dateOfDeathColumn>
+                    <locationOfDeathColumn>5</locationOfDeathColumn>
+                </lifeHistory>
+                <dateFormat>dd/MM/yyyy</dateFormat>
+            </PopulationFile>
+            <LocationsFile>
+                <name>C:\broadwick\StochasticSIR\simMov_farmLocations.csv</name>
+                <separator>,</separator>
+                <alias>locations</alias>
+                <locationIdColumn>1</locationIdColumn>
+                <eastingColumn>2</eastingColumn>
+                <northingColumn>3</northingColumn>
+            </LocationsFile>	     
+        </datafiles>
+    </data>
+    <models>
+	<model id="StochasticSIR">
+	    <classname>gla.ac.uk.sir.StochasticSIRModel</classname>
+	    <parameter id="maxTime" value="40906"/>
+	    <parameter id="startDate" value="01/01/2001"/>
+	    <parameter id="dateFormat" value="dd/MM/yyyy"/>
+	    <parameter id="dateIncrement" value="14"/>
+	    <parameter id="tauLeapIncrement" value="14"/>
+	    <parameter id="species" value="CATTLE"/>
+	    <parameter id="infectedAnimalID" value="UK030025700066"/>
+          <parameter id="initialState1" value="SUSCEPTIBLE"/>
+	    <parameter id="finalState1" value="INFECTIOUS"/>
+	    <parameter id="beta" value=".0005"/>
+          <parameter id="initialState2" value="INFECTIOUS"/>
+	    <parameter id="finalState2" value="RECOVERED"/>
+	    <parameter id="rate2" value=".03"/>
+	</model>
+    </models>
+</project>
